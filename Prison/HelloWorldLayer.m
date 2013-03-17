@@ -161,8 +161,6 @@ NSString * const kKeywords[kCategoryNum][8][3]=
 
 - (void)loadTimeline
 {
-  accountStore = [[ACAccountStore alloc] init];
-  accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
   [accountStore requestAccessToAccountsWithType:accountType
                           withCompletionHandler:^(BOOL granted, NSError *error) {
                             if (granted) {
